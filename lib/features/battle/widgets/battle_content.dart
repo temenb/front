@@ -30,11 +30,11 @@ class BattleContent extends ConsumerWidget {
             content: battle.winner.isEmpty
                 ? const Text("Ничья")
                 : Row(
-              children: [
-                const Text("Победитель: "),
-                PlayerName(profileId: battle.winner),
-              ],
-            ),
+                    children: [
+                      const Text("Победитель: "),
+                      PlayerName(profileId: battle.winner),
+                    ],
+                  ),
             actions: [
               TextButton(
                 onPressed: () {
@@ -59,9 +59,7 @@ class BattleContent extends ConsumerWidget {
     if (battle.players.length > 1) {
       try {
         return Scaffold(
-          appBar: AppBar(
-            title: const Text('Battle: Tic Tac Toe'),
-          ),
+          appBar: AppBar(title: const Text('Battle: Tic Tac Toe')),
           body: BattleBoard(
             battle: battle,
             profile: profile,
@@ -74,9 +72,7 @@ class BattleContent extends ConsumerWidget {
       }
     } else {
       return Scaffold(
-        appBar: AppBar(
-          title: const Text('Battle: Tic Tac Toe'),
-        ),
+        appBar: AppBar(title: const Text('Battle: Tic Tac Toe')),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

@@ -29,7 +29,6 @@ class BattleService {
     channel.start(battleId);
   }
 
-
   canMove(BattleObject battle) {
     if (battle.status != BattleStatus.ACTIVE) {
       return false;
